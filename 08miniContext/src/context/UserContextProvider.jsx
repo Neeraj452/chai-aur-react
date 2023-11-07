@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import UserContext from "./UserContext";
+import Context from "./Context";
 
 const UserContextProvider = ({children}) => {
     const [user, setUser] = React.useState(null)
     return(
-        <UserContext.Provider value={{user, setUser}}>
+        <Context.Provider value={{user, setUser}}>
         {children}
-        </UserContext.Provider>
+        </Context.Provider>
     )
 }
 
